@@ -1,0 +1,6 @@
+.env
+.vscode/settings.json
+ehr-env/
+requirements.no-nemo.txt
+__pycache__/
+*.pyc
