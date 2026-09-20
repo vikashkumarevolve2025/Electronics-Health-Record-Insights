@@ -1,0 +1,13 @@
+models:
+  - type: main
+    engine: bedrock
+    model: "us.anthropic.claude-sonnet-4-20250514-v1:0"
+    parameters:
+      aws_profile: "foresight"
+      aws_region: "us-east-1"
+      temperature: 0.2
+      max_tokens: 3000
+
+  - type: embeddings
+    engine: SentenceTransformers
+    model: NeuML/bioclinical-modernbert-base-embeddings

@@ -133,7 +133,9 @@ ALTER TABLE patient_encounters ADD COLUMN IF NOT EXISTS clinical_embedding vecto
 ### B1. Fix `requirements.txt` version conflicts
 
 Already applied in this repo, but if you touch `requirements.txt` again, be aware:
-- `nemoguardrails==0.24.1` does not exist on PyPI → use `nemoguardrails==0.17.0`.
+- `nemoguardrails==0.24.1` is the tested version for this repo. Its provider registry
+	still does not include Bedrock, so `scripts/06_test_guardrails.py` uses the direct
+	boto3 adapter in `src/guardrails/bedrock_guardrail.py`.
 - `pandas==3.0.5` conflicts with `nemoguardrails`/`streamlit` (`pandas<3` required) → use `pandas==2.2.3`.
 
 ### B2. Ensure `pip` is installed inside the venv
