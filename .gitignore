@@ -1,4 +1,6 @@
 .env
+.env.*
+!.env.example
 .vscode/settings.json
 ehr-env/
 requirements.no-nemo.txt
